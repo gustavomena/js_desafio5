@@ -153,7 +153,7 @@ function createPatient(e) {
 function getFirst(_array) {
   return _array[0];
 }
-//obtiene la ultima hora 
+//obtiene la ultima hora
 function getLast(_array) {
   return _array[_array.length - 1];
 }
@@ -163,24 +163,20 @@ function fillTable(tablename, _array) {
   _array.forEach((element) => {
     document.getElementById(tablename).innerHTML += createPatient(element);
   });
-
 }
 //llena el primero y el ultimo de un array especifico
-function fillFirstAndLast(tablename,_array){
-const firstRow = `<th>Primera Hora<th>${createPatient(getFirst(_array))}`;
-const lastRow = `<th>Ultima Hora<th>${createPatient(getLast(_array))}`;
-document.getElementById(tablename).innerHTML =firstRow+lastRow;
+function fillFirstAndLast(tablename, _array) {
+  const firstRow = `<th>Primera Hora<th>${createPatient(getFirst(_array))}`;
+  const lastRow = `<th>Ultima Hora<th>${createPatient(getLast(_array))}`;
+  document.getElementById(tablename).innerHTML = firstRow + lastRow;
 }
 
-
 //pinta el html con cada arreglo.
-fillFirstAndLast("tableBodyFirstAndLastRadio",radio);
-fillTable("tableBodyRadio",radio);
+fillFirstAndLast("tableBodyFirstAndLastRadio", radio);
+fillTable("tableBodyRadio", radio);
 
-fillFirstAndLast("tableBodyFirstAndLastTrauma",trauma);
-fillTable("tableBodyTrauma",trauma);
+fillFirstAndLast("tableBodyFirstAndLastTrauma", trauma);
+fillTable("tableBodyTrauma", trauma);
 
-fillFirstAndLast("tableBodyFirstAndLastDental",dental);
-fillTable("tableBodyDental",dental);
-
-
+fillFirstAndLast("tableBodyFirstAndLastDental", dental);
+fillTable("tableBodyDental", dental);
